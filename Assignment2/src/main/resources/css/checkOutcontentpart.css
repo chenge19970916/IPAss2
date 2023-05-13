@@ -1,0 +1,131 @@
+.content{
+    width: 1600px;
+    height: 790px;
+    padding: 20px;
+    margin-left: 50px;
+    position: relative;
+    text-align: center;
+    font-size: x-large;
+}
+#cdap{
+    position: absolute;
+    top: 200px;
+    left: 60px;
+    font-size: large;
+}
+#mention{
+    position: absolute;
+    top: 230px;
+    left: 60px;
+    font-size: medium;
+}
+ul{
+    border: 1px black solid;
+    width: 450px;
+    height: 550px;
+    background-color: lightgray;
+    position: absolute;
+    top: 260px;
+    left: 60px;
+}
+ul li{
+    margin-top: 38px;
+    list-style: none;
+    margin-left: -40px;
+}
+#total_money{
+    font-size: x-large;
+    position: absolute;
+    top: 850px;
+    left: 60px;
+}
+#FN{
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    left: 560px;
+    top:310px;
+}
+#LN{
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    left: 560px;
+    top:370px
+}
+#EA{
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    left: 560px;
+    top:430px
+}
+#AL1{
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    left: 560px;
+    top:490px
+}
+#AL2{
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    left: 560px;
+    top:550px
+}
+#C{
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    left: 560px;
+    top:610px
+}
+#S{
+    position: absolute;
+    width: 710px;
+    height: 30px;
+    left: 560px;
+    top:670px
+}
+#PC{
+    position: absolute;
+    width: 700px;
+    height: 30px;
+    left: 560px;
+    top:730px
+}
+#PT{
+    position: absolute;
+    width: 710px;
+    height: 30px;
+    left: 560px;
+    top:790px
+}
+#Continue{
+    position: absolute;
+    background-color: dodgerblue;
+    border-style: none;
+    height: 40px;
+    left: 1300px;
+    bottom: 10px;
+    color: white;
+}
+#Booking{
+    position: absolute;
+    background-color: dodgerblue;
+    border-style: none;
+    height: 40px;
+    left: 1450px;
+    bottom: 10px;
+    color: white;
+}
+#email_mention{
+    height: 30px;
+    width: 400px;
+    position: absolute;
+    right: 30px;
+    top: 415px;
+    color: red;
+    font-weight: bold;
+}

@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CarRent_UTS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/toppart.css" />
+<link rel="stylesheet" type="text/css" href="../css/contentpart.css" />
+<link rel="stylesheet" type="text/css" href="../css/button.css" />
+<body>
+<div class="top">
+    Car Rental Center
+</div>
+<img src="../images/图标.jpg" id="top_img">
+<button id="car_r" onclick="car_reservation()">Car Reservation</button>
+<div class="content">
+    <div id="car1">
+        <img src="../images/car1.jpg">
+        <p class="car_category" id="car1_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car1_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car1_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car1_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car1_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car1_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car1_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart1" onclick="add_car1()">Add to Cart</button>
+    </div>
+    <div id="car2">
+        <img src="../images/car2.jpg">
+        <p class="car_category" id="car2_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car2_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car2_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car2_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car2_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car2_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car2_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart2" onclick="add_car2()">Add to Cart</button>
+    </div>
+    <div id="car3">
+        <img src="../images/car3.jpg">
+        <p class="car_category" id="car3_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car3_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car3_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car3_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car3_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car3_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car3_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart3" onclick="add_car3()">Add to Cart</button>
+    </div>
+    <div id="car4">
+        <img src="../images/car4.jpg">
+        <p class="car_category" id="car4_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car4_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car4_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car4_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car4_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car4_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car4_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart4" onclick="add_car4()">Add to Cart</button>
+    </div>
+    <div id="car5">
+        <img src="../images/car5.jpg">
+        <p class="car_category" id="car5_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car5_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car5_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car5_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car5_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car5_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car5_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart5" onclick="add_car5()">Add to Cart</button>
+    </div>
+    <div id="car6">
+        <img src="../images/car6.jpg">
+        <p class="car_category" id="car6_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car6_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car6_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car6_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car6_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car6_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car6_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart6" onclick="add_car6()">Add to Cart</button>
+    </div>
+    <div id="car7">
+        <img src="../images/car7.jpg">
+        <p class="car_category" id="car7_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car7_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car7_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car7_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car7_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car7_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car7_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart7" onclick="add_car7()">Add to Cart</button>
+    </div>
+    <div id="car8">
+        <img src="../images/car8.jpg">
+        <p class="car_category" id="car8_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car8_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car8_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car8_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car8_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car8_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car8_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart8" onclick="add_car8()">Add to Cart</button>
+    </div>
+    <div id="car9">
+        <img src="../images/car9.jpg">
+        <p class="car_category" id="car9_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car9_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car9_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car9_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car9_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car9_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car9_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart9" onclick="add_car9()">Add to Cart</button>
+    </div>
+    <div id="car10">
+        <img src="../images/car10.jpg">
+        <p class="car_category" id="car10_category"></p>
+        <p><span style="font-weight: bold">mileage: </span><span id="car10_mileage"></span></p>
+        <p><span style="font-weight: bold">fueltype: </span><span id="car10_fueltype"></span></p>
+        <p><span style="font-weight: bold">seats: </span><span id="car10_seats"></span></p>
+        <p><span style="font-weight: bold">price_per_day: $</span><span id="car10_priceday"></span></p>
+        <p><span style="font-weight: bold">availability: </span><span id="car10_availability"></span></p>
+        <p><span style="font-weight: bold">description: </span><span id="car10_description"></span></p>
+        <button class="add_to_cart" id="add_to_cart10" onclick="add_car10()">Add to Cart</button>
+    </div>
+</div>
+
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+
+    localStorage.clear();
+    $.ajax({
+        type: 'GET',
+        url:'http://localhost:8080/cars/rent',
+        success: function(data) {
+            // 处理响应数据
+            $('#car1_category').text(data[0].brand + "-" + data[0].model + "-" + data[0].modelyear);
+            $('#car1_seats').text(data[0].seats);
+            $('#car1_mileage').text(data[0].mileage);
+            $('#car1_fueltype').text(data[0].fueltype);
+            $('#car1_description').text(data[0].description);
+            $('#car1_availability').text(data[0].availability);
+            $('#car1_priceday').text(data[0].priceday);
+
+            $('#car2_category').text(data[1].brand + "-" + data[1].model + "-" + data[1].modelyear);
+            $('#car2_seats').text(data[1].seats);
+            $('#car2_mileage').text(data[1].mileage);
+            $('#car2_fueltype').text(data[1].fueltype);
+            $('#car2_description').text(data[1].description);
+            $('#car2_availability').text(data[1].availability);
+            $('#car2_priceday').text(data[1].priceday);
+
+            $('#car3_category').text(data[2].brand + "-" + data[2].model + "-" + data[2].modelyear);
+            $('#car3_seats').text(data[2].seats);
+            $('#car3_mileage').text(data[2].mileage);
+            $('#car3_fueltype').text(data[2].fueltype);
+            $('#car3_description').text(data[2].description);
+            $('#car3_availability').text(data[2].availability);
+            $('#car3_priceday').text(data[2].priceday);
+
+            $('#car4_category').text(data[3].brand + "-" + data[3].model + "-" + data[3].modelyear);
+            $('#car4_seats').text(data[3].seats);
+            $('#car4_mileage').text(data[3].mileage);
+            $('#car4_fueltype').text(data[3].fueltype);
+            $('#car4_description').text(data[3].description);
+            $('#car4_availability').text(data[3].availability);
+            $('#car4_priceday').text(data[3].priceday);
+
+            $('#car5_category').text(data[4].brand + "-" + data[4].model + "-" + data[4].modelyear);
+            $('#car5_seats').text(data[4].seats);
+            $('#car5_mileage').text(data[4].mileage);
+            $('#car5_fueltype').text(data[4].fueltype);
+            $('#car5_description').text(data[4].description);
+            $('#car5_availability').text(data[4].availability);
+            $('#car5_priceday').text(data[4].priceday);
+
+            $('#car6_category').text(data[5].brand + "-" + data[5].model + "-" + data[5].modelyear);
+            $('#car6_seats').text(data[5].seats);
+            $('#car6_mileage').text(data[5].mileage);
+            $('#car6_fueltype').text(data[5].fueltype);
+            $('#car6_description').text(data[5].description);
+            $('#car6_availability').text(data[5].availability);
+            $('#car6_priceday').text(data[5].priceday);
+
+            $('#car7_category').text(data[6].brand + "-" + data[6].model + "-" + data[6].modelyear);
+            $('#car7_seats').text(data[6].seats);
+            $('#car7_mileage').text(data[6].mileage);
+            $('#car7_fueltype').text(data[6].fueltype);
+            $('#car7_description').text(data[6].description);
+            $('#car7_availability').text(data[6].availability);
+            $('#car7_priceday').text(data[6].priceday);
+
+            $('#car8_category').text(data[7].brand + "-" + data[7].model + "-" + data[7].modelyear);
+            $('#car8_seats').text(data[7].seats);
+            $('#car8_mileage').text(data[7].mileage);
+            $('#car8_fueltype').text(data[7].fueltype);
+            $('#car8_description').text(data[7].description);
+            $('#car8_availability').text(data[7].availability);
+            $('#car8_priceday').text(data[7].priceday);
+
+            $('#car9_category').text(data[8].brand + "-" + data[8].model + "-" + data[8].modelyear);
+            $('#car9_seats').text(data[8].seats);
+            $('#car9_mileage').text(data[8].mileage);
+            $('#car9_fueltype').text(data[8].fueltype);
+            $('#car9_description').text(data[8].description);
+            $('#car9_availability').text(data[8].availability);
+            $('#car9_priceday').text(data[8].priceday);
+
+            $('#car10_category').text(data[9].brand + "-" + data[9].model + "-" + data[9].modelyear);
+            $('#car10_seats').text(data[9].seats);
+            $('#car10_mileage').text(data[9].mileage);
+            $('#car10_fueltype').text(data[9].fueltype);
+            $('#car10_description').text(data[9].description);
+            $('#car10_availability').text(data[9].availability);
+            $('#car10_priceday').text(data[9].priceday);
+            const ava_car1 = document.getElementById("car1_availability").innerText;
+            const ava_car2 = document.getElementById("car2_availability").innerText;
+            const ava_car3 = document.getElementById("car3_availability").innerText;
+            const ava_car4 = document.getElementById("car4_availability").innerText;
+            const ava_car5 = document.getElementById("car5_availability").innerText;
+            const ava_car6 = document.getElementById("car6_availability").innerText;
+            const ava_car7 = document.getElementById("car7_availability").innerText;
+            const ava_car8 = document.getElementById("car8_availability").innerText;
+            const ava_car9 = document.getElementById("car9_availability").innerText;
+            const ava_car10 = document.getElementById("car10_availability").innerText;
+            if (ava_car1 == "false") {
+                document.getElementById("add_to_cart1").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart1").onclick = function () {
+                    localStorage.setItem("car1_id","1");
+                }
+            }
+            if (ava_car2 == "false") {
+                document.getElementById("add_to_cart2").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart2").onclick = function () {
+                    localStorage.setItem("car2_id","2");
+                }
+            }
+            if (ava_car3 == "false") {
+                document.getElementById("add_to_cart3").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart3").onclick = function () {
+                    localStorage.setItem("car3_id","3");
+                }
+            }
+            if (ava_car4 == "false") {
+                document.getElementById("add_to_cart4").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart4").onclick = function () {
+                    localStorage.setItem("car4_id","4");
+                }
+            }
+            if (ava_car5 == "false") {
+                document.getElementById("add_to_cart5").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart5").onclick = function () {
+                    localStorage.setItem("car5_id","5");
+                }
+            }
+            if (ava_car6 == "false") {
+                document.getElementById("add_to_cart6").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart6").onclick = function () {
+                    localStorage.setItem("car6_id","6");
+                }
+            }
+            if (ava_car7 == "false") {
+                document.getElementById("add_to_cart7").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart7").onclick = function () {
+                    localStorage.setItem("car7_id","7");
+                }
+            }
+            if (ava_car8 == "false") {
+                document.getElementById("add_to_cart8").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart8").onclick = function () {
+                    localStorage.setItem("car8_id","8");
+                }
+            }
+            if (ava_car9 == "false") {
+                document.getElementById("add_to_cart9").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart9").onclick = function () {
+                    localStorage.setItem("car9_id","9");
+                }
+            }
+            if (ava_car10 == "false") {
+                document.getElementById("add_to_cart10").onclick = function () {
+                    alert("This car is not available!");
+                }
+            }else {
+                document.getElementById("add_to_cart10").onclick = function () {
+                    localStorage.setItem("car10_id","10");
+                }
+            }
+        }
+    })
+    function car_reservation() {
+        window.location.href='carReservation.html';
+    }
+</script>
+</html>

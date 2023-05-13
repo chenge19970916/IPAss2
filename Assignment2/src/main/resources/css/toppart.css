@@ -1,0 +1,12 @@
+.top{
+    background-color: black;
+    height: 100px;
+    font-size: larger;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+#top_img{
+    position: absolute;
+    top: 0px;
+}

@@ -1,0 +1,96 @@
+.content{
+    border: 1px black solid;
+    width: 1400px;
+    height: 1500px;
+    margin-left: 150px;
+    margin-top: 50px;
+    padding: 20px;
+    position: relative;
+}
+#car1{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+}
+#car2{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 20px;
+    left: 350px;
+}
+#car3{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 20px;
+    left: 700px;
+}
+#car4{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 20px;
+    left: 1050px;
+}
+#car5{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 500px;
+}
+#car6{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 500px;
+    left: 350px;
+}
+
+#car7{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 500px;
+    left: 700px;
+}
+
+#car8{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 500px;
+    left: 1050px;
+}
+#car9{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 980px;
+}
+#car10{
+    border: 1px black solid;
+    width: 300px;
+    height: 450px;
+    position: absolute;
+    top: 980px;
+    left: 350px;
+}
+
+p{
+    font-size: small;
+    margin-top: 2px;
+}
+.car_category{
+    font-size: medium;
+    font-weight: normal;
+    margin-bottom: 10px;
+}

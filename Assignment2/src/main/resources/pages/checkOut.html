@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/checkOuttoppart.css" />
+<link rel="stylesheet" type="text/css" href="../css/checkOutcontentpart.css" />
+<body>
+<div class="top">
+Car Rental Center
+</div>
+<div class="content">
+    Check Out
+</div>
+<p id="cdap">Customer Details and Payment</p>
+<p id="mention">Please fill in your details.<span style="color: red"> * </span>indicates required field.</p>
+<ul>
+    <li>First Name<span style="color: red"> * </span></li>
+    <li>Last Name<span style="color: red"> * </span></li>
+    <li>Email address<span style="color: red"> * </span></li>
+    <li>Address line 1<span style="color: red"> * </span></li>
+    <li>Address line 2</li>
+    <li>City<span style="color: red"> * </span></li>
+    <li>State<span style="color: red"> * </span></li>
+    <li>Post Code<span style="color: red"> * </span></li>
+    <li>Payment Type<span style="color: red"> * </span></li>
+</ul>
+<p id="total_money">You are required to pay $<span id="total"></span></p>
+<input type="text" id="FN">
+<input type="text" id="LN">
+<input type="text" id="EA">
+<input type="text" id="AL1">
+<input type="text" id="AL2">
+<input type="text" id="C">
+<select id="S">
+    <option value="option1">New South Wales (NSW)</option>
+    <option value="option2">Victoria (VIC)</option>
+    <option value="option3">Queensland (QLD)</option>
+    <option value="option3">South Australia (SA)</option>
+    <option value="option3">Western Australia (WA)</option>
+    <option value="option3">Tasmania (TAS)</option>
+    <option value="option3">Australian Capital Territory (ACT)</option>
+    <option value="option3">Northern Territory (NT)</option>
+</select>
+<input type="text" id="PC">
+<select id="PT">
+    <option value="option1">VISA</option>
+    <option value="option2">MasterCard</option>
+    <option value="option3">PayPal</option>
+    <option value="option3">Wechat</option>
+    <option value="option3">AliPay</option>
+    <option value="option3">Transfer</option>
+</select>
+<button id="Continue" onclick="Continue_selection()">Continue Selection</button>
+<button id="Booking" onclick="Booking()">Booking</button>
+<p id="email_mention"></p>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var total =localStorage.getItem("total_price");
+    console.log("total_price:", total);
+    document.getElementById("total").innerText=total;
+    function Booking() {
+        var first_name = document.getElementById('FN').value;
+        var last_name = document.getElementById('LN').value;
+        var email = document.getElementById('EA').value;
+        var Address1 = document.getElementById('AL1').value;
+        var Address2 = document.getElementById('AL2').value;
+        var post_code = document.getElementById('PC').value;
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var validInput = true;
+        if (first_name == ""){
+            alert("please enter your first name!");
+            var validInput = false;
+        }else if(last_name == ""){
+            alert("please enter your last name!");
+            var validInput = false;
+        }else if(email == ""){
+            alert("please enter your email!");
+            var validInput = false;
+        }else if(Address1 == ""){
+            alert("please enter your Address!");
+            var validInput = false;
+        }else if(post_code == ""){
+            alert("please enter your post code!");
+            var validInput = false;
+        }else if(!emailRegex.test(email)){
+            document.getElementById("email_mention").innerText = "Please enter a valid email address!";
+            var validInput = false;
+        }
+        if (validInput) {
+            const user_email = $('#EA').val();
+            // 获取当前日期
+            var today = new Date();
+            var year = today.getFullYear();
+            var month = today.getMonth() + 1;
+            var day = today.getDate();
+
+// 将月份和日期前导零补齐
+            month = month < 10 ? '0' + month : month;
+            day = day < 10 ? '0' + day : day;
+
+            const rent_date = year + '-' + month + '-' + day;
+            const bond_amount = 0;
+            const data = {user_email: user_email, rent_date: rent_date, bond_amount: bond_amount};
+            const url = 'http://localhost:8080/cars/addRent';
+            $.ajax({
+                type: 'POST',
+                url: url,
+                data: JSON.stringify(data),
+                contentType: 'application/json',
+                success: function (response) {
+                    alert(response);
+                    let arr = [];
+                    for (let i = 0; i < localStorage.length; i++) {
+                        const key = localStorage.key(i);
+                        if(key == "car1_id" || "car2_id" || "car3_id" || "car4_id"|| "car5_id"|| "car6_id"|| "car7_id"|| "car8_id"|| "car9_id"|| "car10_id"){
+                                let id = parseInt(localStorage.getItem(key));
+                                if (!isNaN(id)) {
+                                    arr.push(id);
+                                }
+                        }
+                    }
+                    $.ajax({
+                        type: 'POST',
+                        url: 'http://localhost:8080/cars/forbiddenCars',
+                        data: JSON.stringify(arr),
+                        contentType: "application/json",
+                        dataType: "json",
+                        success:function (res) {
+                            alert(res);
+                        }
+                    })
+                }
+            })
+        }
+    }
+
+
+    function Continue_selection() {
+        window.location.href="rentCar.html";
+    }
+</script>
+</html>

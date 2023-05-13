@@ -1,0 +1,197 @@
+.content{
+    border: 1px black solid;
+    width: 1400px;
+    height: 790px;
+    margin-left: 100px;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+    font-size: x-large;
+}
+ul{
+    width: 1400px;
+}
+ul li{
+    float: left;
+    margin-left: 155px;
+    list-style: none;
+    font-size: large;
+}
+#selected_car1_img{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 120px;
+    left: 180px;
+}
+#selected_car2_img{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 270px;
+    left: 180px;
+}
+#selected_car3_img{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 420px;
+    left: 180px;
+}
+#selected_car4_img{
+    width: 150px;
+    height: 100px;
+    position: absolute;
+    top: 580px;
+    left: 180px;
+}
+#selected_car1_name{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 160px;
+    left: 390px;
+    font-size: small;
+}
+#selected_car2_name{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 310px;
+    left: 390px;
+    font-size: small;
+}
+#selected_car3_name{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 460px;
+    left: 390px;
+    font-size: small;
+}
+#selected_car4_name{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    top: 620px;
+    left: 390px;
+    font-size: small;
+}
+#selected_car1_price{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 160px;
+    left: 685px;
+    font-size: small;
+}
+#selected_car2_price{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 310px;
+    left: 685px;
+    font-size: small;
+}
+#selected_car3_price{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 460px;
+    left: 685px;
+    font-size: small;
+}
+#selected_car4_price{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 620px;
+    left: 685px;
+    font-size: small;
+}
+#selected_car1_number{
+    border: 1px black solid;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 160px;
+    left: 945px;
+    font-size: small;
+}
+#selected_car2_number{
+    border: 1px black solid;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 310px;
+    left: 945px;
+    font-size: small;
+}
+#selected_car3_number{
+    border: 1px black solid;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 460px;
+    left: 945px;
+    font-size: small;
+}
+#selected_car4_number{
+    border: 1px black solid;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 620px;
+    left: 945px;
+    font-size: small;
+}
+#selected_car1_btn{
+    background-color: dodgerblue;
+    width: 80px;
+    height: 40px;
+    border-style: none;
+    color: white;
+    position: absolute;
+    top: 155px;
+    left: 1195px;
+}
+#selected_car2_btn{
+    background-color: dodgerblue;
+    width: 80px;
+    height: 40px;
+    border-style: none;
+    color: white;
+    position: absolute;
+    top: 305px;
+    left: 1195px;
+}
+#selected_car3_btn{
+    background-color: dodgerblue;
+    width: 80px;
+    height: 40px;
+    border-style: none;
+    color: white;
+    position: absolute;
+    top: 455px;
+    left: 1195px;
+}
+#selected_car4_btn{
+    background-color: dodgerblue;
+    width: 80px;
+    height: 40px;
+    border-style: none;
+    color: white;
+    position: absolute;
+    top: 615px;
+    left: 1195px;
+}
+#check_out{
+    background-color: dodgerblue;
+    width: 200px;
+    height: 40px;
+    border-style: none;
+    color: white;
+    position: absolute;
+    top: 750px;
+    right: 100px;
+}
